@@ -1,0 +1,41 @@
+# 5 STAR TUITION — locked visual reference
+
+The file `docs/brand-reference.png` is the permanent visual guide for all public pages, portals and admin interfaces.
+
+## Core look
+- Modern British tutoring brand: smart, sleek, professional, student-focused and results-driven.
+- Premium without looking like a hotel/jewellery brand.
+- Large areas of white / warm ivory for clarity, with navy used for authority and gold/yellow used selectively for action and emphasis.
+- Rounded, clean UI cards and restrained shadows.
+- Generous whitespace, strong headings, simple navigation and obvious calls to action.
+
+## Locked palette
+- Midnight Navy `#0B1F33`
+- Oxford Navy `#17365D`
+- Heritage Gold `#D6A928`
+- Golden Yellow `#E7B83A`
+- Warm Ivory `#F6F2E8`
+- Clean White `#FFFFFF`
+- Academic Mist `#E9EEF5`
+- Soft Blue `#C9D5E3`
+- Slate `#536273`
+- Success Green `#2F6B5D`
+- Alert Terracotta `#B85846`
+
+## Typography
+- Primary/UI: Manrope
+- Editorial accent: Lora
+
+## Brand use
+- 5★ monogram is the recognisable icon.
+- Gold is an accent, not the dominant page colour.
+- Main public CTA: golden yellow with navy text.
+- Secondary CTA: midnight navy with white text.
+- Status colours are functional, not decorative.
+
+## Content principles
+- British English.
+- Short, clear, confident copy.
+- Student outcomes before corporate claims.
+- Use evidence and genuine reviews only; placeholder/demo content must be labelled as such.
+- Avoid clutter, overlong introductions, childish education graphics and generic graduation-cap-heavy branding.

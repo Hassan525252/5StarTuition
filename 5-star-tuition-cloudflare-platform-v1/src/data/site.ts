@@ -11,6 +11,9 @@ export type Tutor = {
   reviews: number;
   availability: string;
   bio: string;
+  qualifications?: string;
+  location?: string;
+  photo?: string;
 };
 
 export const navGroups = {
@@ -40,17 +43,22 @@ export const subjects = [
 
 export const tutors: Tutor[] = [
   {
-    id: 1, name: 'Ayesha Khan', initials: 'AK', title: 'Mathematics Teacher',
+    id: 1, name: 'James Whitmore', initials: 'JW', title: 'GCSE & A-Level Mathematics',
     subjects: ['Mathematics', 'Further Mathematics'], levels: ['GCSE', 'A-Level'],
-    experience: '7+ years classroom experience', qualified: true, rating: 4.9, reviews: 48,
-    availability: 'Mon, Wed, Thu evenings',
-    bio: 'Calm, structured teaching with a strong focus on exam technique and confidence.'
+    experience: '8+ years teaching experience', qualified: true, rating: 4.9, reviews: 48,
+    availability: 'Tue & Thu evenings',
+    qualifications: 'PGCE Mathematics · BSc Mathematics',
+    location: 'London, United Kingdom',
+    photo: '/images/james-whitmore.webp',
+    bio: 'Clear, structured teaching with a strong focus on confidence, exam technique and ambitious grades.'
   },
   {
     id: 2, name: 'Daniel Foster', initials: 'DF', title: 'Science Specialist',
     subjects: ['Biology', 'Chemistry', 'Physics'], levels: ['KS3', 'GCSE', 'A-Level'],
     experience: '9+ years teaching experience', qualified: true, rating: 5.0, reviews: 61,
     availability: 'Tue, Thu, Sat',
+    qualifications: 'PGCE Science · BSc Biomedical Sciences',
+    location: 'Manchester, United Kingdom',
     bio: 'Makes difficult scientific ideas accessible and develops strong problem-solving habits.'
   },
   {
@@ -58,6 +66,8 @@ export const tutors: Tutor[] = [
     subjects: ['English', '11+', 'UCAS'], levels: ['KS2', 'KS3', 'GCSE'],
     experience: '6+ years tutoring experience', qualified: true, rating: 4.9, reviews: 39,
     availability: 'Mon–Fri afternoons',
+    qualifications: 'PGCE English · BA English Literature',
+    location: 'Birmingham, United Kingdom',
     bio: 'Supportive, precise and highly experienced in writing, comprehension and entrance preparation.'
   },
   {
@@ -65,6 +75,8 @@ export const tutors: Tutor[] = [
     subjects: ['Computer Science', 'Python', 'AI & Digital Skills'], levels: ['KS3', 'GCSE', 'A-Level'],
     experience: '5+ years teaching & industry experience', qualified: true, rating: 4.8, reviews: 27,
     availability: 'Wed, Fri, Sun',
+    qualifications: 'PGCE Computing · BSc Computer Science',
+    location: 'Leeds, United Kingdom',
     bio: 'Combines curriculum knowledge with practical coding and real-world digital skills.'
   }
 ];

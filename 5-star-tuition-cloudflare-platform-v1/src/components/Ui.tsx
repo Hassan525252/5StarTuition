@@ -8,12 +8,12 @@ export function SectionHeading({ eyebrow, title, text, center=false }: { eyebrow
 
 export function TutorCard({ tutor }: { tutor: Tutor }) {
   return <article className="tutor-card">
-    <div className="tutor-avatar">{tutor.initials}</div>
+    <div className="tutor-avatar">{tutor.photo ? <img src={tutor.photo} alt={`${tutor.name} tutor profile`} /> : tutor.initials}</div>
     <div className="tutor-card-top"><div><span className="verified"><BadgeCheck size={16}/> Verified tutor</span><h3>{tutor.name}</h3><p>{tutor.title}</p></div><div className="rating"><Star size={15} fill="currentColor"/> {tutor.rating}</div></div>
     <div className="tag-row">{tutor.subjects.slice(0,3).map(s => <span key={s}>{s}</span>)}</div>
     <p className="tutor-bio">{tutor.bio}</p>
-    <div className="tutor-meta"><span>{tutor.experience}</span><span>{tutor.availability}</span></div>
-    <div className="card-actions"><Link to={`/tutors/${tutor.id}`} className="button button--outline">View Profile</Link><Link to="/find-a-tutor" className="button button--gold">Request Trial</Link></div>
+    <div className="tutor-meta"><span>{tutor.qualifications || tutor.experience}</span><span>{tutor.experience}</span>{tutor.location && <span>{tutor.location}</span>}<span>{tutor.availability}</span></div>
+    <div className="card-actions"><Link to={`/tutors/${tutor.id}`} className="button button--outline">View Profile</Link><Link to="/find-a-tutor" className="button button--gold">Book a FREE trial</Link></div>
   </article>
 }
 

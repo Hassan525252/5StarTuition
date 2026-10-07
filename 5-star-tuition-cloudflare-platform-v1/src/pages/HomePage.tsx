@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, BadgeCheck, BarChart3, BookOpen, Check, Globe2, GraduationCap, ShieldCheck, Sparkles, Star, Target, Users } from 'lucide-react';
+import { ArrowRight, BadgeCheck, BarChart3, BookOpen, Check, Globe2, GraduationCap, MapPin, ShieldCheck, Sparkles, Star, Target, Users } from 'lucide-react';
 import { pricing, reviews, subjects, tutors } from '../data/site';
 import { SectionHeading, TutorCard } from '../components/Ui';
 
@@ -14,26 +14,48 @@ const serviceCards = [
 
 export function HomePage() {
   return <>
-    <section className="hero">
+    <section className="hero hero--first-viewport">
       <div className="hero-bg hero-bg-one"></div><div className="hero-bg hero-bg-two"></div>
       <div className="shell hero-grid">
         <div className="hero-copy">
-          <span className="eyebrow">PERSONALISED ONLINE TUITION · WORLDWIDE</span>
-          <h1>The right tutor.<br/>Clear progress.<br/><span>Better results.</span></h1>
-          <p>Carefully vetted online tutors supporting students from <strong>Year 3 to Year 13</strong>, entrance examinations and university admissions.</p>
-          <div className="hero-actions"><Link className="button button--gold" to="/find-a-tutor">Find My Tutor <ArrowRight size={18}/></Link><Link className="button button--navy" to="/find-a-tutor">Book a Free 30-Minute Trial</Link></div>
-          <div className="trust-strip"><span><ShieldCheck/> Personally vetted tutors</span><span><Globe2/> Online worldwide</span><span><GraduationCap/> Years 3–13 & admissions</span></div>
-        </div>
-        <div className="hero-visual">
-          <div className="hero-panel hero-panel-main">
-            <div className="panel-kicker">Your personalised tutor match</div>
-            <div className="match-profile"><div className="avatar-large">AK</div><div><strong>Ayesha Khan</strong><span>GCSE & A-Level Mathematics</span><small><BadgeCheck size={14}/> Verified teacher · 7+ years</small></div></div>
-            <div className="match-score"><span>Match score</span><strong>96%</strong><div className="progress-track"><i style={{width:'96%'}}/></div></div>
-            <div className="match-chips"><span>Edexcel</span><span>Tuesday evening</span><span>Grade 8–9</span></div>
-            <Link to="/find-a-tutor" className="button button--gold button--full">Book free trial</Link>
+          <span className="eyebrow">UK-QUALIFIED · EXPERIENCED · PERSONALLY VETTED</span>
+          <h1>Expert teaching.<br/>Real progress.<br/><span>Outstanding results.</span></h1>
+          <p>Learn with personally vetted, <strong>UK-qualified and experienced tutors</strong> supporting students from <strong>KS2 to A-levels</strong>, entrance examinations and university admissions.</p>
+          <div className="hero-actions">
+            <Link className="button button--gold button--hero" to="/find-a-tutor">Find my tutor <ArrowRight size={19}/></Link>
+            <Link className="button button--navy button--hero" to="/find-a-tutor">Book a <strong>FREE</strong> 30-minute trial</Link>
           </div>
-          <div className="floating-card floating-card-one"><BarChart3/><div><span>Current grade</span><strong>5 → 8</strong></div></div>
-          <div className="floating-card floating-card-two"><Star fill="currentColor"/><div><span>Parent feedback</span><strong>4.9 / 5</strong></div></div>
+          <div className="trust-strip">
+            <span><BadgeCheck/> UK Qualified, Personally-vetted tutors</span>
+            <span><Globe2/> Online worldwide</span>
+            <span><GraduationCap/> KS2–A-levels & admissions</span>
+          </div>
+        </div>
+        <div className="hero-visual hero-visual--photo">
+          <div className="hero-photo-frame">
+            <img src="/images/home-hero-online-tutoring.webp" alt="Student taking part in a live online mathematics lesson with a tutor" />
+          </div>
+          <div className="hero-panel hero-match-card">
+            <div className="panel-kicker">Your personalised tutor match</div>
+            <div className="match-profile match-profile--photo">
+              <img className="avatar-photo" src="/images/james-whitmore.webp" alt="James Whitmore tutor profile" />
+              <div>
+                <strong>James Whitmore</strong>
+                <span>GCSE & A-Level Mathematics</span>
+                <small><BadgeCheck size={14}/> UK-qualified teacher · Personally vetted</small>
+              </div>
+            </div>
+            <div className="tutor-credential-list">
+              <span><GraduationCap/> PGCE Mathematics · BSc Mathematics</span>
+              <span><Users/> 8+ years teaching experience</span>
+              <span><MapPin/> London, United Kingdom</span>
+            </div>
+            <div className="match-score"><span>Match score</span><strong>96%</strong><div className="progress-track"><i style={{width:'96%'}}/></div></div>
+            <div className="match-chips"><span>Edexcel</span><span>Tuesday evenings</span><span>Grades 8–9</span></div>
+            <Link to="/find-a-tutor" className="button button--gold button--full match-cta">Book a <strong>FREE</strong> trial</Link>
+          </div>
+          <div className="floating-card floating-card-two hero-rating-card"><Star fill="currentColor"/><div><span>Parent feedback</span><strong>4.9 / 5</strong></div></div>
+          <div className="floating-card floating-card-one hero-progress-card"><BarChart3/><div><span>Current grade</span><strong>5 → 8</strong></div></div>
         </div>
       </div>
     </section>
@@ -60,7 +82,7 @@ export function HomePage() {
         ['03','Try the tutor free','Meet in a free 30-minute trial attended by a 5 Star Tuition team member.'],
         ['04','Start regular tuition','Choose a tuition package and begin a consistent, flexible lesson schedule.']
       ].map(([n,t,d]) => <div className="step-card" key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></div>)}</div>
-      <div className="center-row"><Link className="button button--gold" to="/find-a-tutor">Find My Tutor <ArrowRight size={17}/></Link></div>
+      <div className="center-row"><Link className="button button--gold" to="/find-a-tutor">Find my tutor <ArrowRight size={17}/></Link></div>
     </section>
 
     <section className="section section--navy">
@@ -79,13 +101,13 @@ export function HomePage() {
     <section className="section shell">
       <SectionHeading eyebrow="CLEAR PRICING" title="Transparent hourly tuition rates." text="Start with a free 30-minute trial. New students can begin with a 2, 4 or 8-week package." center/>
       <div className="pricing-grid">{pricing.map(([name, price]) => <div className="price-card" key={name}><span>{name}</span><strong>{price}</strong><small>Online 1-to-1 tuition</small></div>)}</div>
-      <div className="trial-banner"><div><span>FREE INITIAL TRIAL</span><h3>Meet the tutor before you commit.</h3><p>No payment required for the first 30-minute trial.</p></div><Link to="/find-a-tutor" className="button button--navy">Book free trial</Link></div>
+      <div className="trial-banner"><div><span>FREE INITIAL TRIAL</span><h3>Meet the tutor before you commit.</h3><p>No payment required for the first 30-minute trial.</p></div><Link to="/find-a-tutor" className="button button--navy">Book a <strong>FREE</strong> trial</Link></div>
     </section>
 
     <section className="section section--mist"><div className="shell"><SectionHeading eyebrow="PARENT FEEDBACK" title="The experience should feel professional from day one." center/><div className="reviews-grid">{reviews.map(r => <figure key={r.name}><div className="stars">★★★★★</div><blockquote>“{r.quote}”</blockquote><figcaption><strong>{r.name}</strong><span>{r.meta}</span></figcaption></figure>)}</div><p className="placeholder-note">Design placeholders only — these will be replaced with verified 5 Star Tuition testimonials before launch.</p></div></section>
 
     <section className="section international"><div className="shell international-grid"><div><span className="eyebrow">ONLINE WORLDWIDE</span><h2>Excellent tuition shouldn’t depend on where you live.</h2><p>We support students internationally while keeping the experience personal, structured and easy to manage.</p><div className="country-row"><span>UK</span><span>UAE</span><span>Qatar</span><span>Bahrain</span><span>Saudi Arabia</span><span>Worldwide</span></div></div><div className="globe-card"><Globe2/><strong>One platform.</strong><span>Students, parents, tutors and admins — connected.</span></div></div></section>
 
-    <section className="final-cta"><div className="shell final-cta-inner"><div><span className="eyebrow eyebrow--gold">READY TO BEGIN?</span><h2>Find the right tutor for your student.</h2><p>Start with a free 30-minute trial and see whether the tutor is the right fit before committing.</p></div><div><Link to="/find-a-tutor" className="button button--gold">Find My Tutor <ArrowRight size={18}/></Link><a className="button button--ghost" href="https://wa.me/447983452340">WhatsApp Us</a></div></div></section>
+    <section className="final-cta"><div className="shell final-cta-inner"><div><span className="eyebrow eyebrow--gold">READY TO BEGIN?</span><h2>Find the right tutor for your student.</h2><p>Start with a free 30-minute trial and see whether the tutor is the right fit before committing.</p></div><div><Link to="/find-a-tutor" className="button button--gold">Find my tutor <ArrowRight size={18}/></Link><a className="button button--ghost" href="https://wa.me/447983452340">WhatsApp Us</a></div></div></section>
   </>;
 }

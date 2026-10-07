@@ -33,10 +33,10 @@ Every public-facing page, portal and admin view must follow `BRAND_REFERENCE.md`
 - Login / role entry point
 
 ## Locked messaging priorities
-1. The right tutor
-2. Clear progress
-3. Better results
-4. Personally vetted tutors
+1. Expert teaching
+2. Real progress
+3. Outstanding results
+4. UK-qualified, experienced and personally vetted tutors
 5. Free 30-minute trial
 6. Transparent pricing
 7. Flexible online tuition worldwide

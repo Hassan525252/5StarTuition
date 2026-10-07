@@ -22,7 +22,7 @@ function MegaMenu({ items, group, onClose }: { items: string[][]; group:'tuition
           </Link>
         ))}
       </div>
-      <div className="mega-footer">Personally vetted tutors · Flexible online lessons · Worldwide access</div>
+      <div className="mega-footer">UK-qualified tutors · Personally vetted · Online worldwide</div>
     </div>
   );
 }
@@ -33,7 +33,7 @@ export function Header() {
   const close = () => { setOpen(null); setMobile(false); };
   return (
     <header className="site-header">
-      <div className="top-note">Expert online tuition worldwide · Free 30-minute trial · UK & international curricula</div>
+      <div className="top-note">UK-qualified & experienced tutors · FREE 30-minute trial · Online worldwide</div>
       <div className="nav-shell">
         <Brand />
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -53,7 +53,7 @@ export function Header() {
         </nav>
         <div className="nav-actions">
           <Link to="/login" className="text-action">Sign in</Link>
-          <Link to="/find-a-tutor" className="button button--gold button--small">Find a Tutor</Link>
+          <Link to="/find-a-tutor" className="button button--gold button--small">Find my tutor</Link>
           <button className="mobile-toggle" onClick={() => setMobile(v => !v)} aria-label="Toggle menu">{mobile ? <X/> : <Menu/>}</button>
         </div>
       </div>
@@ -69,7 +69,7 @@ export function Header() {
           <Link onClick={close} to="/for-parents">For Parents</Link>
           <Link onClick={close} to="/become-a-tutor">For Tutors</Link>
           <Link onClick={close} to="/contact">Contact</Link>
-          <Link onClick={close} to="/find-a-tutor" className="button button--gold">Find a Tutor</Link>
+          <Link onClick={close} to="/find-a-tutor" className="button button--gold">Find my tutor</Link>
         </div>
       )}
     </header>

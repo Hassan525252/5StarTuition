@@ -39,3 +39,10 @@ The file `docs/brand-reference.png` is the permanent visual guide for all public
 - Student outcomes before corporate claims.
 - Use evidence and genuine reviews only; placeholder/demo content must be labelled as such.
 - Avoid clutter, overlong introductions, childish education graphics and generic graduation-cap-heavy branding.
+
+
+## LOGO CHANGE — LOCKED
+Use the selected gold sweeping 5 + star Option 2 mark from `/public/images/logo-mark-option-2.webp`. The primary compact wordmark uses Playfair Display for “5 STAR”, Manrope letterspacing for “TUITION”, and the established gold/navy/ivory palette.
+
+## Homepage first viewport — LOCKED
+The first viewport must display the approved online-tutoring hero image, the results-led headline, UK-qualified/experienced positioning, larger CTAs with FREE uppercase, and the James Whitmore personalised tutor-match card overlay.

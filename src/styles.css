@@ -276,3 +276,94 @@
   .hero-tutor-details svg{width:16px;height:16px}
   .hero-tutor-cta{font-size:13px}
 }
+
+/* ============================================================
+   V4 — HOMEPAGE COPY, TUTOR PORTRAIT & FREE-TRIAL BOOKING FLOW
+   ============================================================ */
+
+/* Revised homepage copy retains the locked hero design. */
+.hero-copy>p strong{font-weight:800;color:var(--navy)}
+
+/* Tutor portrait: zoomed out, more formal portrait treatment, with stronger fade into specialist label. */
+.hero-tutor-card-final{grid-template-columns:34% 66%}
+.hero-tutor-photo-panel{background:linear-gradient(180deg,#dce5ec 0%,#b7c5d1 52%,#102942 100%)}
+.hero-tutor-photo-panel>img{object-fit:cover;object-position:center 22%;transform:scale(.96);transform-origin:center top;filter:saturate(.96) contrast(1.01)}
+.hero-tutor-photo-panel:after{inset:42% 0 0;background:linear-gradient(180deg,rgba(11,31,51,0) 0%,rgba(11,31,51,.30) 28%,rgba(11,31,51,.82) 66%,rgba(11,31,51,.98) 100%)}
+.hero-tutor-specialism{bottom:19px}
+.hero-tutor-specialism strong{font-size:22px}
+.hero-tutor-specialism span{font-size:15px}
+
+/* Booking page */
+.booking-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:28px;align-items:start}
+.booking-main{display:grid;gap:22px}
+.booking-step-card{background:#fff;border:1px solid #dbe3ea;border-radius:22px;padding:28px;box-shadow:0 14px 42px rgba(11,31,51,.06)}
+.booking-step-heading{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.booking-step-heading>span{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--yellow);color:var(--navy);font-weight:900;flex:none}
+.booking-step-heading h2{margin:0;font-family:Lora,serif;font-size:26px;color:var(--navy)}
+.booking-step-heading p{margin:4px 0 0;color:var(--slate);font-size:13px}
+.booking-label,.booking-form label{display:flex;flex-direction:column;gap:7px;color:#425166;font-size:12px;font-weight:750}
+.booking-label select,.booking-form input,.booking-form select,.booking-form textarea,.extra-subject-row select{width:100%;border:1px solid #cbd6df;border-radius:11px;background:#fff;color:var(--ink);padding:12px 13px;font:inherit;outline:none}
+.booking-label select:focus,.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus,.extra-subject-row select:focus{border-color:var(--navy2);box-shadow:0 0 0 3px rgba(23,54,93,.08)}
+.booking-add-link{margin-top:13px;border:0;background:transparent;color:var(--navy2);font-weight:800;display:inline-flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer}
+.booking-add-link svg{width:17px;height:17px}
+.extra-subjects{margin-top:18px;padding-top:16px;border-top:1px solid #edf1f4;display:grid;gap:10px}
+.extra-subjects-title{display:flex;justify-content:space-between;align-items:center;color:var(--navy)}
+.extra-subjects-title span{font-size:11px;color:var(--slate)}
+.extra-subject-row{display:grid;grid-template-columns:1fr 40px;gap:8px}
+.extra-subject-row button{border:1px solid #d7e0e7;border-radius:10px;background:#fff;display:grid;place-items:center;color:var(--slate);cursor:pointer}
+.extra-subject-row button:hover{color:#a33;border-color:#dfc1c1}
+.extra-subject-row svg{width:17px;height:17px}
+.timezone-banner{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:var(--mist);color:var(--navy);margin-bottom:15px}
+.timezone-banner svg{color:var(--gold);width:20px;height:20px}
+.timezone-banner div{display:flex;flex-direction:column}
+.timezone-banner strong{font-size:12px}.timezone-banner span{font-size:11px;color:var(--slate);margin-top:2px}
+.booking-dates{display:flex;gap:8px;overflow-x:auto;padding:3px 0 10px;scrollbar-width:thin}
+.booking-dates button{flex:0 0 auto;border:1px solid #d7e0e7;background:#fff;color:var(--navy);border-radius:10px;padding:10px 13px;font-weight:700;cursor:pointer}
+.booking-dates button.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.slot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:8px}
+.slot-grid button{border:1px solid #d9e2e9;background:#fff;border-radius:10px;padding:10px 8px;display:flex;align-items:center;justify-content:center;gap:6px;color:var(--navy);font-weight:750;cursor:pointer}
+.slot-grid button svg{width:15px;height:15px;color:var(--gold)}
+.slot-grid button:hover{border-color:#b9c9d6;background:#fafcfd}
+.slot-grid button.selected{background:var(--yellow);border-color:var(--yellow);color:var(--navy)}
+.slot-grid button.selected svg{color:var(--navy)}
+.slot-empty{grid-column:1/-1;border:1px dashed #cbd6df;border-radius:11px;padding:24px;text-align:center;color:var(--slate)}
+.selected-slot-list{margin-top:16px;border-top:1px solid #edf1f4;padding-top:14px;display:grid;gap:8px}
+.selected-slot-list>strong{font-size:12px;color:var(--navy)}
+.selected-slot-list>div{display:flex;justify-content:space-between;gap:12px;border-radius:9px;background:#f7f9fb;padding:9px 11px;font-size:11px}
+.selected-slot-list span{color:var(--slate)}.selected-slot-list b{color:var(--navy);text-align:right}
+.booking-form{display:grid;gap:18px}
+.booking-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.booking-warning{border:1px solid #efcf9c;background:#fff8e8;color:#6b4a0a;border-radius:11px;padding:11px 13px;font-size:12px;font-weight:700}
+.booking-submit{min-height:54px;font-size:15px}
+.booking-aside{display:grid;gap:12px;position:sticky;top:110px}
+.booking-aside>div{background:var(--ivory);border:1px solid #dce4eb;border-radius:16px;padding:17px}
+.booking-aside svg{color:var(--gold)}
+.booking-aside h3{font-size:14px;margin:8px 0 4px;color:var(--navy)}
+.booking-aside p{font-size:11px;line-height:1.55;color:var(--slate);margin:0}
+.booking-success{text-align:center;background:#fff;border:1px solid #dce4eb;border-radius:22px;padding:55px 24px;max-width:760px;margin:auto}
+.booking-success svg{width:56px;height:56px;color:var(--green)}
+.booking-success h2{font-family:Lora,serif;font-size:34px;color:var(--navy);margin:12px 0 6px}
+.booking-success p{color:var(--slate)}
+.booking-success small{display:block;margin:14px auto 0;max-width:560px;background:#f4f7f9;padding:10px;border-radius:10px;color:var(--slate)}
+
+@media(max-width:1000px){
+  .booking-layout{grid-template-columns:1fr}.booking-aside{position:static;grid-template-columns:1fr 1fr}
+  .slot-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .booking-step-card{padding:20px}.booking-form-grid{grid-template-columns:1fr}.booking-aside{grid-template-columns:1fr}
+  .slot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.selected-slot-list>div{flex-direction:column;gap:3px}.selected-slot-list b{text-align:left}
+  .hero-tutor-card-final{grid-template-columns:31% 69%}
+}
+@media(max-width:520px){
+  .hero-tutor-card-final{grid-template-columns:1fr}.hero-tutor-photo-panel{height:220px;min-height:220px}
+  .hero-tutor-photo-panel>img{object-position:center 19%;transform:scale(.82);background:#dce5ec}
+  .hero-tutor-photo-panel:after{inset:38% 0 0}
+  .slot-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* V4 portrait composition: roughly 60% clean portrait / 40% specialist treatment. */
+.hero-tutor-photo-panel>img{position:absolute;inset:0 0 auto 0;width:100%;height:70%;object-fit:cover;object-position:center 20%;transform:none}
+.hero-tutor-photo-panel:after{inset:43% 0 0;background:linear-gradient(180deg,rgba(11,31,51,0) 0%,rgba(11,31,51,.20) 18%,rgba(11,31,51,.72) 52%,rgba(11,31,51,.98) 100%)}
+.hero-tutor-specialism{bottom:21px}
+@media(max-width:520px){.hero-tutor-photo-panel>img{height:72%;object-fit:cover;object-position:center 19%;transform:none}.hero-tutor-photo-panel:after{inset:40% 0 0}}

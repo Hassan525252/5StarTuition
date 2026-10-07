@@ -24,10 +24,10 @@ export function HomePage() {
             <span className="hero-title-line">Real progress.</span>
             <span className="hero-title-line hero-title-gold">Outstanding results.</span>
           </h1>
-          <p>Learn with personally vetted, <strong>UK-qualified and experienced tutors</strong> supporting students from <strong>KS2 to A-levels</strong>, entrance examinations and university admissions.</p>
+          <p>Access expert tuition remotely from the comfort of your home, with personally vetted, <strong>UK-Qualified and Experienced tutors</strong> supporting students from <strong>KS2 to A-levels</strong>, <strong>Entrance</strong> examinations and <strong>University</strong> admissions.</p>
           <div className="hero-actions">
             <Link className="button button--gold button--hero" to="/find-a-tutor">Find my tutor <ArrowRight size={19}/></Link>
-            <Link className="button button--navy button--hero" to="/find-a-tutor">Book a <strong>FREE</strong> 30-minute trial</Link>
+            <Link className="button button--navy button--hero" to="/book-free-trial">Book a <strong>FREE</strong> 30-minute trial</Link>
           </div>
           <div className="trust-strip">
             <span><BadgeCheck/> UK Qualified, Personally-vetted tutors</span>
@@ -56,7 +56,7 @@ export function HomePage() {
                 <span><MapPin/><b>Based in London, United Kingdom</b></span>
                 <span><Laptop/><b>Remote Tutoring Available</b></span>
               </div>
-              <Link to="/find-a-tutor" className="hero-tutor-cta">Book a <strong>FREE</strong> Trial <ArrowRight size={19}/></Link>
+              <Link to="/book-free-trial?subject=Mathematics" className="hero-tutor-cta">Book a <strong>FREE</strong> Trial <ArrowRight size={19}/></Link>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ export function HomePage() {
     <section className="section shell">
       <SectionHeading eyebrow="CLEAR PRICING" title="Transparent hourly tuition rates." text="Start with a free 30-minute trial. New students can begin with a 2, 4 or 8-week package." center/>
       <div className="pricing-grid">{pricing.map(([name, price]) => <div className="price-card" key={name}><span>{name}</span><strong>{price}</strong><small>Online 1-to-1 tuition</small></div>)}</div>
-      <div className="trial-banner"><div><span>FREE INITIAL TRIAL</span><h3>Meet the tutor before you commit.</h3><p>No payment required for the first 30-minute trial.</p></div><Link to="/find-a-tutor" className="button button--navy">Book a <strong>FREE</strong> trial</Link></div>
+      <div className="trial-banner"><div><span>FREE INITIAL TRIAL</span><h3>Meet the tutor before you commit.</h3><p>No payment required for the first 30-minute trial.</p></div><Link to="/book-free-trial" className="button button--navy">Book a <strong>FREE</strong> trial</Link></div>
     </section>
 
     <section className="section section--mist"><div className="shell"><SectionHeading eyebrow="PARENT FEEDBACK" title="The experience should feel professional from day one." center/><div className="reviews-grid">{reviews.map(r => <figure key={r.name}><div className="stars">★★★★★</div><blockquote>“{r.quote}”</blockquote><figcaption><strong>{r.name}</strong><span>{r.meta}</span></figcaption></figure>)}</div><p className="placeholder-note">Design placeholders only — these will be replaced with verified 5 Star Tuition testimonials before launch.</p></div></section>

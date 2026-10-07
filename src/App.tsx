@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
 import { FindTutorPage, BecomeTutorPage } from './pages/FormPages';
+import { BookTrialPage } from './pages/BookingPage';
 import { AboutPage, ExamsAdmissionsPage, HowItWorksPage, NotFoundPage, PricingPage, ResourcesPage, SubjectDetailPage, SubjectsPage, TuitionPage, TutorProfilePage, TutorsPage } from './pages/PublicPages';
 import { CancellationPolicyPage, ContactPage, CurriculaPage, FaqPage, ParentsPage, PrivacyPage, ReviewsPage, SafeguardingPage, TermsPage, TutorsInfoPage } from './pages/ContentPages';
 import { AdminPortalPage, LoginPage, ParentPortalPage, TutorPortalPage } from './pages/PortalPages';
@@ -19,6 +20,7 @@ export default function App(){return <BrowserRouter><Routes>
     <Route path="/tutors" element={<TutorsPage/>}/>
     <Route path="/tutors/:id" element={<TutorProfilePage/>}/>
     <Route path="/find-a-tutor" element={<FindTutorPage/>}/>
+    <Route path="/book-free-trial" element={<BookTrialPage/>}/>
     <Route path="/become-a-tutor" element={<BecomeTutorPage/>}/>
     <Route path="/for-tutors" element={<TutorsInfoPage/>}/>
     <Route path="/for-parents" element={<ParentsPage/>}/>

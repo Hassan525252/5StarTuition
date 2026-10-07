@@ -1,19 +1,20 @@
-# 5 STAR TUITION — V3
+# 5 STAR TUITION — V4.1
 
-**CURRENT VERSION: V3**
+**CURRENT VERSION: V4.1**
 
 # 5 STAR TUITION
 ## Locked brand reference
 
 The design system is now locked to `docs/brand-reference.png`. Read `BRAND_REFERENCE.md` before making UI/content changes. `CONTENT_MAP.md` lists the current website/portal structure.
 
-## Cloudflare Platform — V3
+## Cloudflare Platform — V4
 
-This is the current V3 build of the 5 Star Tuition platform architecture. It is intentionally structured as a **full web application**, not a single brochure page.
+This is the current V4 build of the 5 Star Tuition platform architecture. It is intentionally structured as a **full web application**, not a single brochure page.
 
 ## What is already in this build
 
 ### Public website
+- Book a FREE Trial calendar with local-time display, multiple-subject scheduling and parent/student details form
 - Modern British navy / gold / ivory brand system
 - Responsive sticky navigation and mega menus
 - Full homepage

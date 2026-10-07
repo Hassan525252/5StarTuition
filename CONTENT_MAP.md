@@ -13,6 +13,7 @@ Every public-facing page, portal and admin view must follow `BRAND_REFERENCE.md`
 - Tutors + searchable tutor directory
 - Dynamic tutor profile pages
 - Find a Tutor
+- Book a FREE Trial — location-aware calendar + parent/student booking form
 - For Parents
 - For Tutors
 - Become a Tutor

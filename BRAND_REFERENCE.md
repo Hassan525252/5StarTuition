@@ -47,16 +47,16 @@ Use the selected gold sweeping 5 + star Option 2 mark from `/public/images/logo-
 ## Homepage first viewport — LOCKED
 The first viewport must display the approved online-tutoring hero image, the results-led headline, UK-qualified/experienced positioning, larger CTAs with FREE uppercase, and the James Whitmore personalised tutor-match card overlay.
 
-## FINAL TUTOR CARD — LOCKED IN V3
+## FINAL TUTOR CARD — LOCKED IN V4
 - Dark Midnight/Oxford Navy presentation with light text and gold icons.
 - Left portrait panel with `Mathematics` above smaller `Specialist`.
 - Main identity: `Mr. James Whitmore` / `GCSE & A-Level Mathematics`.
 - Key points use consistent sizing: `UK-Qualified Teacher`; `PGCE · BSc Mathematics · MA Education`; `8+ Years Teaching Experience`; `Based in London, United Kingdom`; `Remote Tutoring Available`.
 - No match percentage, no match-score progress bar, no Edexcel/availability/grade chips.
 - CTA: `Book a FREE Trial` using Golden Yellow `#E7B83A` with Midnight Navy text.
-- Reference image: `docs/FINAL-TUTOR-CARD-V3.png`.
+- Reference image: `docs/FINAL-TUTOR-CARD-V4.png`.
 
-## HERO CLEAN-UP — LOCKED IN V3
+## HERO CLEAN-UP — LOCKED IN V4
 - Remove the floating `Parent feedback` badge from the hero image.
 - Remove the floating `Current grade` badge from the hero image.
 - Keep the approved tutoring photograph visible and professionally cropped.

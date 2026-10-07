@@ -13,7 +13,7 @@ export function TutorCard({ tutor }: { tutor: Tutor }) {
     <div className="tag-row">{tutor.subjects.slice(0,3).map(s => <span key={s}>{s}</span>)}</div>
     <p className="tutor-bio">{tutor.bio}</p>
     <div className="tutor-meta"><span>{tutor.qualifications || tutor.experience}</span><span>{tutor.experience}</span>{tutor.location && <span>{tutor.location}</span>}<span>{tutor.availability}</span></div>
-    <div className="card-actions"><Link to={`/tutors/${tutor.id}`} className="button button--outline">View Profile</Link><Link to="/find-a-tutor" className="button button--gold">Book a FREE trial</Link></div>
+    <div className="card-actions"><Link to={`/tutors/${tutor.id}`} className="button button--outline">View Profile</Link><Link to={`/book-free-trial?subject=${encodeURIComponent(tutor.subjects[0] || "")}`} className="button button--gold">Book a FREE trial</Link></div>
   </article>
 }
 

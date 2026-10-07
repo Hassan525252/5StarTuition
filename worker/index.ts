@@ -96,6 +96,67 @@ async function createTutorApplication(request: Request, env: Env) {
   return json({ ok: true, id: result.meta.last_row_id }, { status: 201 });
 }
 
+
+
+function ukClock(date: Date) {
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(date);
+  const hour = Number(parts.find(p => p.type === 'hour')?.value || 0);
+  const minute = Number(parts.find(p => p.type === 'minute')?.value || 0);
+  return { hour, minute };
+}
+
+function validateTrialSlots(slots: string[]) {
+  if (new Set(slots).size !== slots.length) throw new Error('Trial slots must be unique');
+  for (const slot of slots) {
+    const date = new Date(slot);
+    if (Number.isNaN(date.getTime()) || date.getTime() <= Date.now()) throw new Error('Trial slots must be valid future times');
+    if (![0,30].includes(date.getUTCMinutes())) throw new Error('Trial slots must be 30-minute calendar slots');
+    const uk = ukClock(date);
+    const blocked = uk.hour < 3 || uk.hour > 22 || (uk.hour === 22 && uk.minute >= 30);
+    if (blocked) throw new Error('Selected trial time is not available');
+  }
+}
+
+async function createTrialBooking(request: Request, env: Env) {
+  if (!env.DB) return json({ ok: false, preview: true, error: 'D1 database not connected yet.' }, { status: 503 });
+  const body = await readBody(request);
+  const subjects = Array.isArray(body.subjects) ? body.subjects.filter((x: unknown): x is string => typeof x === 'string').slice(0, 11) : [];
+  const trialSlots = Array.isArray(body.trial_slots) ? body.trial_slots.filter((x: unknown): x is string => typeof x === 'string').slice(0, 11) : [];
+  if (!subjects.length) throw new Error('At least one subject is required');
+  if (trialSlots.length !== subjects.length) throw new Error('One separate trial slot is required for each subject');
+  validateTrialSlots(trialSlots);
+  const row = {
+    parent_name: required(text(body, 'parent_name', 120), 'Parent name'),
+    phone: required(text(body, 'phone', 80), 'Phone'),
+    whatsapp: required(text(body, 'whatsapp', 80), 'WhatsApp number'),
+    email: required(text(body, 'email', 180), 'Email'),
+    country: required(text(body, 'country', 100), 'Country'),
+    student_name: required(text(body, 'student_name', 120), 'Student name'),
+    academic_level: required(text(body, 'academic_level', 100), 'Academic level'),
+    year_group: required(text(body, 'year_group', 80), 'Year group'),
+    exam_board: text(body, 'exam_board', 300),
+    exam_date: text(body, 'exam_date', 100),
+    hours_per_week: text(body, 'hours_per_week', 60),
+    tutor_gender: text(body, 'tutor_gender', 30),
+    timing_flexibility: text(body, 'timing_flexibility', 1500),
+    another_child: text(body, 'another_child', 20),
+    student_info: text(body, 'student_info', 3000),
+    timezone: required(text(body, 'timezone', 120), 'Time zone'),
+  };
+  const result = await env.DB.prepare(`
+    INSERT INTO trial_bookings (
+      parent_name,phone,whatsapp,email,country,student_name,subjects_json,academic_level,year_group,
+      exam_board,exam_date,hours_per_week,tutor_gender,timing_flexibility,another_child,student_info,
+      timezone,trial_slots_json,status
+    ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?, 'requested')
+  `).bind(
+    row.parent_name,row.phone,row.whatsapp,row.email,row.country,row.student_name,JSON.stringify(subjects),row.academic_level,row.year_group,
+    row.exam_board,row.exam_date,row.hours_per_week,row.tutor_gender,row.timing_flexibility,row.another_child,row.student_info,
+    row.timezone,JSON.stringify(trialSlots)
+  ).run();
+  return json({ ok: true, id: result.meta.last_row_id }, { status: 201 });
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -105,6 +166,9 @@ export default {
     }
     if (request.method === 'POST' && url.pathname === '/api/tutor-applications') {
       try { return await createTutorApplication(request, env); } catch (error) { return json({ ok: false, error: error instanceof Error ? error.message : 'Invalid request' }, { status: 400 }); }
+    }
+    if (request.method === 'POST' && url.pathname === '/api/trial-bookings') {
+      try { return await createTrialBooking(request, env); } catch (error) { return json({ ok: false, error: error instanceof Error ? error.message : 'Invalid request' }, { status: 400 }); }
     }
     if (url.pathname.startsWith('/api/')) return json({ ok: false, error: 'Not found' }, { status: 404 });
     return env.ASSETS.fetch(request);

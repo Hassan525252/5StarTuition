@@ -40,24 +40,13 @@ export function HomePage() {
           <div className="hero-photo-frame">
             <img src="/images/home-hero-online-tutoring.webp" alt="Student taking part in a live online mathematics lesson with a tutor" />
           </div>
-          <div className="hero-tutor-card-final">
-            <div className="hero-tutor-photo-panel">
-              <img src="/images/james-whitmore.webp" alt="Mr. James Whitmore, Mathematics Specialist" />
-              <div className="hero-tutor-specialism"><strong>Mathematics</strong><span>Specialist</span></div>
-            </div>
-            <div className="hero-tutor-content">
-              <div className="hero-tutor-kicker">Your Personalised Tutor Match</div>
-              <div className="hero-tutor-name">Mr. James Whitmore</div>
-              <div className="hero-tutor-title">GCSE & A-Level Mathematics</div>
-              <div className="hero-tutor-details">
-                <span><GraduationCap/><b>UK-Qualified Teacher</b></span>
-                <span><BadgeCheck/><b>PGCE · BSc Mathematics · MA Education</b></span>
-                <span><Users/><b>8+ Years Teaching Experience</b></span>
-                <span><MapPin/><b>Based in London, United Kingdom</b></span>
-                <span><Laptop/><b>Remote Tutoring Available</b></span>
-              </div>
-              <Link to="/book-free-trial?subject=Mathematics" className="hero-tutor-cta">Book a <strong>FREE</strong> Trial <ArrowRight size={19}/></Link>
-            </div>
+          <div className="hero-tutor-card-approved" aria-label="Your Personalised Tutor Match: Mr. James Whitmore, GCSE and A-Level Mathematics, UK-Qualified Teacher, PGCE, BSc Mathematics, MA Education, 8+ Years Teaching Experience, based in London, United Kingdom, Remote Tutoring Available.">
+            <img src="/images/tutor-card-v5-approved.webp" alt="Mr. James Whitmore personalised tutor match card" />
+            <Link
+              to="/book-free-trial?subject=Mathematics"
+              className="hero-tutor-card-approved-cta"
+              aria-label="Book a FREE Trial with a Mathematics tutor"
+            />
           </div>
         </div>
       </div>

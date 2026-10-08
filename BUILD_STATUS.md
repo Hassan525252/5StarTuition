@@ -1,13 +1,11 @@
-# BUILD STATUS — V4.1
+# BUILD STATUS — V5
 
-**CURRENT BUILD: V4.1**
+**CURRENT BUILD: V5**
 
-## Status
-- Codebase structure: ready
-- New large homepage hero image: updated with user-approved image
-- Tutor card portrait/details: unchanged from approved V4
-- Booking flow: unchanged from V4
-
-## Deployment reminder
-Cloudflare root directory should remain set to `/`.
-Upload the **contents** of this build to the GitHub repository root.
+- Homepage V5 UI changes: implemented
+- Approved primary logo: implemented
+- Approved hero image: implemented
+- Approved Layout Option 3 (two-line gap): implemented
+- Tutor card: approved content preserved
+- FREE-trial booking flow: retained from V4
+- Cloudflare project root: `/`

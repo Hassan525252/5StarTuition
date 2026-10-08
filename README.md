@@ -1,13 +1,13 @@
-# 5 STAR TUITION — V4.1
+# 5 STAR TUITION — V5
 
-**CURRENT VERSION: V4.1**
+**CURRENT VERSION: V5**
 
 # 5 STAR TUITION
 ## Locked brand reference
 
 The design system is now locked to `docs/brand-reference.png`. Read `BRAND_REFERENCE.md` before making UI/content changes. `CONTENT_MAP.md` lists the current website/portal structure.
 
-## Cloudflare Platform — V4
+## Cloudflare Platform — V5
 
 This is the current V4 build of the 5 Star Tuition platform architecture. It is intentionally structured as a **full web application**, not a single brochure page.
 

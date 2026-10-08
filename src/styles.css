@@ -367,3 +367,91 @@
 .hero-tutor-photo-panel:after{inset:43% 0 0;background:linear-gradient(180deg,rgba(11,31,51,0) 0%,rgba(11,31,51,.20) 18%,rgba(11,31,51,.72) 52%,rgba(11,31,51,.98) 100%)}
 .hero-tutor-specialism{bottom:21px}
 @media(max-width:520px){.hero-tutor-photo-panel>img{height:72%;object-fit:cover;object-position:center 19%;transform:none}.hero-tutor-photo-panel:after{inset:40% 0 0}}
+
+/* ============================================================
+   V5 — LOCKED HOMEPAGE / BRAND REFINEMENTS
+   ============================================================ */
+
+/* Approved primary logo for the white site header. */
+.brand--approved-logo{min-width:300px;display:flex;align-items:center;justify-content:flex-start;line-height:0}
+.brand--approved-logo img{display:block;width:300px;max-width:100%;height:auto;object-fit:contain}
+
+/* Final first-viewport layout: a little more breathing room between copy and main image. */
+.hero--first-viewport{padding-top:70px}
+.hero--first-viewport .hero-grid{grid-template-columns:1.03fr .97fr;gap:58px;align-items:start}
+.hero--first-viewport .hero-copy>p{color:var(--navy2);font-size:17px;line-height:1.58;margin-top:22px}
+.hero--first-viewport .hero-copy>p strong{color:var(--navy);font-weight:800}
+.hero--first-viewport .trust-strip span{color:var(--navy2)}
+
+/* Matching CTA typography — only colour treatment differs. */
+.hero--first-viewport .button--hero{font-size:15px;font-weight:800;letter-spacing:0;word-spacing:0}
+.hero--first-viewport .hero-actions .button--gold,
+.hero--first-viewport .hero-actions .button--navy{min-height:58px}
+
+/* FINAL LOCKED layout option 3: main image, two-line visual gap, then tutor card. */
+.hero-visual--photo{
+  min-height:0;
+  width:96%;
+  justify-self:end;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+}
+.hero-photo-frame{
+  position:relative;
+  inset:auto;
+  width:100%;
+  aspect-ratio:884 / 485;
+  border-radius:24px;
+  overflow:hidden;
+  flex:0 0 auto;
+}
+.hero-photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center center}
+.hero-photo-frame:after{background:linear-gradient(180deg,rgba(11,31,51,0) 72%,rgba(11,31,51,.06) 100%)}
+.hero-tutor-card-final{
+  position:relative;
+  inset:auto;
+  left:auto;
+  right:auto;
+  bottom:auto;
+  width:70%;
+  max-width:70%;
+  min-height:278px;
+  margin:30px auto 0;
+  grid-template-columns:31% 69%;
+  border-radius:22px;
+  box-shadow:0 24px 58px rgba(11,31,51,.20);
+}
+.hero-tutor-photo-panel{min-height:278px}
+.hero-tutor-content{padding:19px 21px 17px}
+.hero-tutor-kicker{font-size:11px;margin-bottom:5px}
+.hero-tutor-name{font-size:23px}
+.hero-tutor-title{font-size:14px}
+.hero-tutor-details{gap:6px;margin:13px 0 12px}
+.hero-tutor-details span{font-size:11.5px;grid-template-columns:18px minmax(0,1fr);gap:8px}
+.hero-tutor-details svg{width:16px;height:16px}
+.hero-tutor-cta{min-height:44px;font-size:13px}
+.hero-tutor-specialism strong{font-size:20px}
+.hero-tutor-specialism span{font-size:14px}
+
+@media(max-width:1100px){
+  .brand--approved-logo{min-width:255px}.brand--approved-logo img{width:255px}
+  .hero--first-viewport .hero-grid{gap:40px}
+  .hero-visual--photo{width:100%;min-height:0}
+  .hero-photo-frame{inset:auto}
+  .hero-tutor-card-final{left:auto;right:auto;width:82%;max-width:82%;grid-template-columns:31% 69%}
+}
+@media(max-width:800px){
+  .brand--approved-logo{min-width:210px}.brand--approved-logo img{width:210px}
+  .hero--first-viewport .hero-grid{grid-template-columns:1fr;gap:38px}
+  .hero-visual--photo{width:100%;min-height:0}
+  .hero-photo-frame{inset:auto;aspect-ratio:884 / 485}
+  .hero-tutor-card-final{left:auto;right:auto;width:92%;max-width:92%;margin-top:24px;grid-template-columns:31% 69%;min-height:300px}
+  .hero-tutor-photo-panel{min-height:300px}
+}
+@media(max-width:520px){
+  .brand--approved-logo{min-width:175px}.brand--approved-logo img{width:175px}
+  .hero-tutor-card-final{width:96%;max-width:96%;grid-template-columns:1fr;margin-top:22px;min-height:500px}
+  .hero-tutor-photo-panel{height:220px;min-height:220px}
+}

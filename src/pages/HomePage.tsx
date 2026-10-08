@@ -26,8 +26,8 @@ export function HomePage() {
           </h1>
           <p>Access expert tuition remotely from the comfort of your home, with personally vetted, <strong>UK-Qualified and Experienced tutors</strong> supporting students from <strong>KS2 to A-levels</strong>, <strong>Entrance</strong> examinations and <strong>University</strong> admissions.</p>
           <div className="hero-actions">
-            <Link className="button button--gold button--hero" to="/find-a-tutor">Find my tutor <ArrowRight size={19}/></Link>
-            <Link className="button button--navy button--hero" to="/book-free-trial">Book a <strong>FREE</strong> 30-minute trial</Link>
+            <Link className="button button--gold button--hero" to="/find-a-tutor">Find My Tutor <ArrowRight size={19}/></Link>
+            <Link className="button button--navy button--hero" to="/book-free-trial">Book Your <strong>FREE</strong> 30-minute Trial</Link>
           </div>
           <div className="trust-strip">
             <span><BadgeCheck/> UK Qualified, Personally-vetted tutors</span>

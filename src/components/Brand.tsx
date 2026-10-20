@@ -4,7 +4,7 @@ export function Brand({ light = false }: { light?: boolean }) {
   if (!light) {
     return (
       <Link to="/" className="brand brand--approved-logo" aria-label="5 Star Tuition home">
-        <img src="/images/5-star-tuition-logo-v5.webp" alt="5 Star Tuition — Expert Online Tuition. Wherever You Are." />
+        <img src="/images/5-star-tuition-logo-v6.webp" alt="5 Star Tuition — Expert Online Tuition. Wherever You Are." />
       </Link>
     );
   }

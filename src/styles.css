@@ -458,7 +458,7 @@
 
 /* ============================================================
    V5 REDONE — exact approved first-viewport proportions
-   Source of truth: docs/V5-HOMEPAGE-APPROVED-REFERENCE.png
+   Historical V5 rules retained below; V6 overrides are at the end of this file.
    ============================================================ */
 @media (min-width:1101px){
   .hero--first-viewport .hero-grid{
@@ -540,3 +540,167 @@
   .hero-tutor-card-approved-cta{left:39.5%;height:18.5%}
 }
 .hero--first-viewport .hero-photo-frame:after{background:none}
+
+/* ============================================================
+   V6 — FINAL APPROVED FIRST-VIEWPORT REFINEMENT
+   ============================================================ */
+:root{--brand-navy-v6:#002646}
+
+/* More generous, modern desktop composition. */
+@media (min-width:1101px){
+  .hero--first-viewport{padding:66px 0 86px;align-items:flex-start}
+  .hero--first-viewport .hero-grid{
+    width:min(1540px,calc(100% - 64px));
+    grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);
+    gap:64px;
+    align-items:start;
+  }
+  .hero--first-viewport .hero-copy{padding-top:18px;min-width:0}
+}
+
+/* Exact approved left-side colour and cleaner vertical rhythm. */
+.hero--first-viewport .eyebrow{
+  color:var(--brand-navy-v6);
+  margin-bottom:22px;
+  line-height:1.2;
+}
+.hero--first-viewport .hero-copy h1.hero-title{
+  margin:0 0 30px;
+  line-height:1.06;
+  letter-spacing:-.04em;
+}
+.hero--first-viewport .hero-copy h1 .hero-title-line{
+  line-height:1.065;
+  margin:0 0 .105em;
+}
+.hero--first-viewport .hero-copy h1 .hero-title-line:last-child{margin-bottom:0}
+.hero--first-viewport .hero-copy h1 .hero-title-gold:after{margin-top:.20em}
+
+.hero--first-viewport .hero-intro{
+  max-width:720px;
+  color:var(--brand-navy-v6);
+  font-size:16px;
+  line-height:1.55;
+  margin:0;
+}
+.hero--first-viewport .hero-intro span{
+  display:block;
+  margin:0 0 5px;
+  white-space:nowrap;
+}
+.hero--first-viewport .hero-intro span:last-child{margin-bottom:0}
+.hero--first-viewport .hero-intro strong{color:var(--brand-navy-v6);font-weight:800}
+
+.hero--first-viewport .hero-actions{
+  display:grid;
+  grid-template-columns:minmax(240px,.82fr) minmax(330px,1.18fr);
+  gap:20px;
+  align-items:stretch;
+  margin:34px 0 0;
+  max-width:790px;
+}
+.hero--first-viewport .button--hero{
+  min-height:64px;
+  padding:18px 27px;
+  font-size:16px;
+  border-radius:12px;
+}
+.hero--first-viewport .button--navy{background:var(--brand-navy-v6);color:#fff}
+
+.hero--first-viewport .trust-strip{
+  display:grid;
+  grid-template-columns:minmax(285px,max-content) minmax(230px,max-content);
+  column-gap:38px;
+  row-gap:20px;
+  margin-top:32px;
+  align-items:center;
+}
+.hero--first-viewport .trust-strip span{
+  color:var(--brand-navy-v6);
+  font-size:12.5px;
+  font-weight:650;
+  line-height:1.35;
+  white-space:nowrap;
+  gap:11px;
+}
+.hero--first-viewport .trust-strip svg{
+  color:var(--brand-navy-v6);
+  width:25px;
+  height:25px;
+  flex:0 0 25px;
+}
+
+/* Right side remains the approved HD image; only the card placement/scale changes. */
+.hero-visual--photo{
+  width:100%;
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:flex-start;
+  overflow:visible;
+}
+.hero-photo-frame{
+  position:relative;
+  inset:auto;
+  width:100%;
+  aspect-ratio:883 / 464;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(0,38,70,.08);
+  box-shadow:none;
+  background:#fff;
+}
+.hero-photo-frame img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  display:block;
+}
+.hero--first-viewport .hero-photo-frame:after{display:none!important}
+
+.hero-tutor-card-approved--v6{
+  position:relative;
+  width:56%;
+  max-width:56%;
+  align-self:flex-end;
+  margin:-66px 2.2% 0 0;
+  z-index:6;
+  border-radius:17px;
+  overflow:hidden;
+  box-shadow:0 16px 36px rgba(0,38,70,.18);
+  line-height:0;
+  background:var(--brand-navy-v6);
+}
+.hero-tutor-card-approved--v6>img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.hero-tutor-card-approved-cta{display:none!important}
+
+@media (max-width:1320px) and (min-width:1101px){
+  .hero--first-viewport .hero-intro{font-size:14.5px}
+  .hero--first-viewport .hero-actions{grid-template-columns:minmax(210px,.8fr) minmax(300px,1.2fr)}
+  .hero--first-viewport .trust-strip{grid-template-columns:1fr 1fr;column-gap:24px}
+  .hero--first-viewport .trust-strip span{font-size:11.5px}
+}
+
+@media (max-width:1100px){
+  .hero--first-viewport .hero-intro span{white-space:normal;display:inline}
+  .hero--first-viewport .hero-intro span+span:before{content:' '}
+  .hero--first-viewport .hero-actions{display:flex;max-width:none;margin-top:28px}
+  .hero--first-viewport .trust-strip{grid-template-columns:1fr 1fr;gap:15px 24px;margin-top:24px}
+  .hero-tutor-card-approved--v6{width:58%;max-width:58%;margin:-52px 2% 0 0}
+}
+@media (max-width:800px){
+  .hero-tutor-card-approved--v6{width:70%;max-width:70%;margin:-38px auto 0}
+  .hero--first-viewport .trust-strip{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .hero--first-viewport .hero-copy h1.hero-title{margin-bottom:22px}
+  .hero--first-viewport .hero-actions{display:grid;grid-template-columns:1fr;gap:12px}
+  .hero-tutor-card-approved--v6{width:92%;max-width:92%;margin:16px auto 0;border-radius:14px}
+  .hero--first-viewport .trust-strip span{white-space:normal}
+}

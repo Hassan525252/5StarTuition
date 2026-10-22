@@ -458,7 +458,7 @@
 
 /* ============================================================
    V5 REDONE — exact approved first-viewport proportions
-   Historical V5 rules retained below; V6 overrides are at the end of this file.
+   Historical rules retained below; V7 overrides are at the end of this file.
    ============================================================ */
 @media (min-width:1101px){
   .hero--first-viewport .hero-grid{
@@ -542,7 +542,7 @@
 .hero--first-viewport .hero-photo-frame:after{background:none}
 
 /* ============================================================
-   V6 — FINAL APPROVED FIRST-VIEWPORT REFINEMENT
+   PRE-V7 — APPROVED FIRST-VIEWPORT FOUNDATION
    ============================================================ */
 :root{--brand-navy-v6:#002646}
 
@@ -660,7 +660,7 @@
 }
 .hero--first-viewport .hero-photo-frame:after{display:none!important}
 
-.hero-tutor-card-approved--v6{
+.hero-tutor-card-approved--v7{
   position:relative;
   width:56%;
   max-width:56%;
@@ -673,7 +673,7 @@
   line-height:0;
   background:var(--brand-navy-v6);
 }
-.hero-tutor-card-approved--v6>img{
+.hero-tutor-card-approved--v7>img{
   display:block;
   width:100%;
   height:auto;
@@ -692,15 +692,137 @@
   .hero--first-viewport .hero-intro span+span:before{content:' '}
   .hero--first-viewport .hero-actions{display:flex;max-width:none;margin-top:28px}
   .hero--first-viewport .trust-strip{grid-template-columns:1fr 1fr;gap:15px 24px;margin-top:24px}
-  .hero-tutor-card-approved--v6{width:58%;max-width:58%;margin:-52px 2% 0 0}
+  .hero-tutor-card-approved--v7{width:58%;max-width:58%;margin:-52px 2% 0 0}
 }
 @media (max-width:800px){
-  .hero-tutor-card-approved--v6{width:70%;max-width:70%;margin:-38px auto 0}
+  .hero-tutor-card-approved--v7{width:70%;max-width:70%;margin:-38px auto 0}
   .hero--first-viewport .trust-strip{grid-template-columns:1fr}
 }
 @media (max-width:560px){
   .hero--first-viewport .hero-copy h1.hero-title{margin-bottom:22px}
   .hero--first-viewport .hero-actions{display:grid;grid-template-columns:1fr;gap:12px}
-  .hero-tutor-card-approved--v6{width:92%;max-width:92%;margin:16px auto 0;border-radius:14px}
+  .hero-tutor-card-approved--v7{width:92%;max-width:92%;margin:16px auto 0;border-radius:14px}
   .hero--first-viewport .trust-strip span{white-space:normal}
+}
+
+/* ============================================================
+   V7 — MODERN EDUCATION / OPTION B
+   ============================================================ */
+:root{
+  --brand-navy-v7:#002646;
+  --brand-gold-v7:#E7B83A;
+  --academic-blue-v7:#EAF2FE;
+  --academic-blue-soft-v7:#F5F9FF;
+}
+
+/* Header: white navigation first, trust banner directly below. */
+.site-header{background:rgba(255,255,255,.97)}
+.top-note{
+  order:2;
+  background:var(--brand-navy-v7);
+  color:#fff;
+  padding:8px 12px;
+  border-top:1px solid rgba(0,38,70,.08);
+}
+.top-note-inner{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:13px 18px;
+  font-size:11.5px;
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:.09em;
+}
+.top-note-inner i{font-style:normal;opacity:.72}
+
+/* Brighter Option B hero: white + academic mist/soft blue, while preserving navy/gold branding. */
+.hero--first-viewport{
+  background:
+    radial-gradient(circle at 14% 18%,rgba(231,184,58,.12),transparent 25%),
+    radial-gradient(circle at 88% 42%,rgba(172,203,239,.28),transparent 34%),
+    linear-gradient(125deg,#ffffff 0%,var(--academic-blue-soft-v7) 55%,var(--academic-blue-v7) 100%);
+}
+.hero--first-viewport .hero-bg-one{
+  background:radial-gradient(circle,rgba(231,184,58,.19) 0%,rgba(231,184,58,0) 72%);
+  opacity:.8;
+}
+.hero--first-viewport .hero-bg-two{
+  background:radial-gradient(circle,rgba(184,211,241,.62) 0%,rgba(184,211,241,0) 72%);
+  opacity:.72;
+}
+
+/* Eyebrow moved to the dark banner, so hero begins cleanly with the headline. */
+.hero--first-viewport .hero-copy{padding-top:30px}
+.hero--first-viewport .hero-copy h1.hero-title{
+  margin-top:0;
+  margin-bottom:34px;
+}
+
+/* Final V7 headline wording has no punctuation. */
+.hero--first-viewport .hero-copy h1 .hero-title-line{
+  color:var(--brand-navy-v7);
+}
+.hero--first-viewport .hero-copy h1 .hero-title-gold{
+  color:var(--brand-gold-v7);
+}
+
+/* Supporting copy is one consistent normal weight — no selective bolding. */
+.hero--first-viewport .hero-intro{
+  color:var(--brand-navy-v7);
+  font-weight:400;
+  max-width:760px;
+  line-height:1.62;
+}
+.hero--first-viewport .hero-intro span{font-weight:400}
+
+/* One homepage CTA only. */
+.hero--first-viewport .hero-actions--single{
+  display:flex;
+  grid-template-columns:none;
+  max-width:520px;
+  margin-top:34px;
+}
+.hero--first-viewport .hero-actions--single .button--hero{
+  width:100%;
+  justify-content:center;
+  background:var(--brand-gold-v7);
+  color:var(--brand-navy-v7);
+  box-shadow:0 14px 34px rgba(231,184,58,.22);
+}
+.hero--first-viewport .hero-actions--single .button--hero:hover{
+  background:#edc44f;
+  transform:translateY(-1px);
+}
+
+/* Tutor profile moves fully underneath the teaching image, retaining the previously approved size. */
+.hero-tutor-card-approved--v7{
+  width:56%;
+  max-width:56%;
+  align-self:flex-end;
+  margin:18px 2.2% 0 0;
+  position:relative;
+  z-index:6;
+}
+
+/* Slightly brighter trust area without introducing another brand colour. */
+.hero--first-viewport .trust-strip span,
+.hero--first-viewport .trust-strip svg{color:var(--brand-navy-v7)}
+
+@media (max-width:1100px){
+  .hero-tutor-card-approved--v7{width:58%;max-width:58%;margin:18px 2% 0 0}
+  .hero--first-viewport .hero-actions--single{max-width:520px}
+}
+@media (max-width:800px){
+  .hero-tutor-card-approved--v7{width:70%;max-width:70%;margin:18px auto 0}
+}
+@media (max-width:560px){
+  .top-note-inner{gap:6px 9px;font-size:9.5px;letter-spacing:.05em;flex-wrap:wrap}
+  .hero--first-viewport .hero-actions--single{display:flex;max-width:none}
+  .hero-tutor-card-approved--v7{width:92%;max-width:92%;margin:16px auto 0}
+}
+
+/* V7 header CTA follows the same booking-first conversion path. */
+@media (min-width:1101px){
+  .nav-actions .button--small{white-space:nowrap;padding:10px 14px;font-size:11.5px}
 }

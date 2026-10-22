@@ -18,20 +18,18 @@ export function HomePage() {
       <div className="hero-bg hero-bg-one"></div><div className="hero-bg hero-bg-two"></div>
       <div className="shell hero-grid">
         <div className="hero-copy">
-          <span className="eyebrow">UK-QUALIFIED · EXPERIENCED · PERSONALLY VETTED</span>
           <h1 className="hero-title">
-            <span className="hero-title-line">Expert teaching.</span>
-            <span className="hero-title-line">Real progress.</span>
-            <span className="hero-title-line hero-title-gold">Outstanding results.</span>
+            <span className="hero-title-line">Expert teaching</span>
+            <span className="hero-title-line">Real progress</span>
+            <span className="hero-title-line hero-title-gold">Outstanding results</span>
           </h1>
           <p className="hero-intro">
             <span>Access expert tuition remotely from the comfort of your home, with personally vetted,</span>
-            <span><strong>UK-Qualified and Experienced tutors</strong> supporting students from <strong>KS2 to A-levels</strong>,</span>
-            <span><strong>Entrance examinations and University admissions.</strong></span>
+            <span>UK-Qualified and Experienced tutors supporting students from KS2 to A-levels,</span>
+            <span>Entrance examinations and University admissions.</span>
           </p>
-          <div className="hero-actions">
-            <Link className="button button--gold button--hero" to="/find-a-tutor">Find My Tutor <ArrowRight size={19}/></Link>
-            <Link className="button button--navy button--hero" to="/book-free-trial">Book Your <strong>FREE</strong> 30-minute Trial</Link>
+          <div className="hero-actions hero-actions--single">
+            <Link className="button button--gold button--hero" to="/book-free-trial">Book Your <strong>FREE</strong> 30-minute Trial <ArrowRight size={19}/></Link>
           </div>
           <div className="trust-strip">
             <span><BadgeCheck/> UK Qualified, Personally-vetted tutors</span>
@@ -44,8 +42,8 @@ export function HomePage() {
           <div className="hero-photo-frame">
             <img src="/images/home-hero-online-tutoring.webp" alt="Student taking part in a live online mathematics lesson with a tutor" />
           </div>
-          <div className="hero-tutor-card-approved hero-tutor-card-approved--v6" aria-label="Your Personalised Tutor Match: Mr. James Whitmore, GCSE and A-Level Mathematics, UK-Qualified Teacher, PGCE, BSc Mathematics, MA Education, 8+ Years Teaching Experience, based in London, United Kingdom, Remote Tutoring Available.">
-            <img src="/images/tutor-card-v6-approved.webp" alt="Mr. James Whitmore personalised tutor match card" />
+          <div className="hero-tutor-card-approved hero-tutor-card-approved--v7" aria-label="Your Personalised Tutor Match: Mr. James Whitmore, GCSE and A-Level Mathematics, UK-Qualified Teacher, PGCE, BSc Mathematics, MA Education, 8+ Years Teaching Experience, based in London, United Kingdom, Remote Tutoring Available.">
+            <img src="/images/tutor-card-v7-approved.webp" alt="Mr. James Whitmore personalised tutor match card" />
           </div>
         </div>
       </div>

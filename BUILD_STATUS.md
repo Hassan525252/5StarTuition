@@ -1,10 +1,7 @@
-# BUILD STATUS — V6
+# BUILD STATUS — V7
 
-**CURRENT BUILD: V6**
+**CURRENT BUILD: V7**
 
-- Homepage V6 styling and assets: ready
-- Existing booking flow: retained
-- Cloudflare root directory: `/`
-- Production D1 binding still required before storing real customer bookings.
+V7 applies the approved Option B / Modern Education homepage refinements while preserving the existing platform functionality, approved imagery and tutor-card asset.
 
-Upload the **contents** of this folder directly to the GitHub repository root.
+Cloudflare root directory should remain `/`.

@@ -1,6 +1,6 @@
-# 5 STAR TUITION — V6
+# 5 STAR TUITION — V7
 
-**CURRENT VERSION: V6**
+**CURRENT VERSION: V7**
 
 # 5 STAR TUITION
 ## Locked brand reference

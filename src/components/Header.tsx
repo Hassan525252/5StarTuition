@@ -33,7 +33,6 @@ export function Header() {
   const close = () => { setOpen(null); setMobile(false); };
   return (
     <header className="site-header">
-      <div className="top-note"><div className="top-note-inner"><span>UK-Qualified &amp; Experienced tutors</span><i>·</i><span>FREE 30-minute trial</span><i>·</i><span>Worldwide</span></div></div>
       <div className="nav-shell">
         <Brand />
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -53,10 +52,11 @@ export function Header() {
         </nav>
         <div className="nav-actions">
           <Link to="/login" className="text-action">Sign in</Link>
-          <Link to="/find-a-tutor" className="button button--gold button--small">Find my tutor</Link>
+          <Link to="/book-free-trial" className="button button--gold button--small">Book Your FREE 30-minute Trial</Link>
           <button className="mobile-toggle" onClick={() => setMobile(v => !v)} aria-label="Toggle menu">{mobile ? <X/> : <Menu/>}</button>
         </div>
       </div>
+      <div className="top-note"><div className="top-note-inner"><span>UK-QUALIFIED</span><i>·</i><span>EXPERIENCED</span><i>·</i><span>PERSONALLY VETTED</span></div></div>
       {mobile && (
         <div className="mobile-menu">
           <Link onClick={close} to="/">Home</Link>
@@ -69,7 +69,7 @@ export function Header() {
           <Link onClick={close} to="/for-parents">For Parents</Link>
           <Link onClick={close} to="/become-a-tutor">For Tutors</Link>
           <Link onClick={close} to="/contact">Contact</Link>
-          <Link onClick={close} to="/find-a-tutor" className="button button--gold">Find my tutor</Link>
+          <Link onClick={close} to="/book-free-trial" className="button button--gold">Book Your FREE 30-minute Trial</Link>
         </div>
       )}
     </header>
